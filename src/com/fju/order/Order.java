@@ -9,6 +9,9 @@ public class Order {
         this.amount = amount;
         this.delivery = delivery;
         shipFeed = delivery.price;
+        if(amount >= 199 && delivery.name == "Shopee"){
+            shipFeed = 0;
+        }
     }
     public int total(){
         return amount+shipFeed;
